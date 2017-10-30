@@ -14,13 +14,14 @@ has template_path => ( is => 'ro', );
 
 has template_path => (
     is  => 'lazy',
-    isa => Str,
+    isa => Str | CodeRef,
 );
 
 sub _build_template_path {
     my ($self) = @_;
+
     if ( $self->form->can('template_path') ) {
-        return $self->form->template_path($self);
+        return sub { $self->form->template_path($self) };
     }
     return;
 }
@@ -74,6 +75,7 @@ sub render {
     }
 
     my $tmpl_path = $self->template_path;
+    $tmpl_path = $tmpl_path->() if is_coderef($tmpl_path);
 
     die "No template is specified for '" . $field->full_name . "'."
       unless $tmpl_path;
