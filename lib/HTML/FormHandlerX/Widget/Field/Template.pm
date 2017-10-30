@@ -73,7 +73,6 @@ sub render {
         $form->$method( $field, \%stash );
     }
 
-    my $type = $field->html5_type_attr // $field->type_attr;
     my $tmpl_path = $self->template_path;
 
     die "No template is specified for '" . $field->full_name . "'."
