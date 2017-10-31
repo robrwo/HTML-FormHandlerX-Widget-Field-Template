@@ -18,6 +18,11 @@ has template_renderer => (
     },
 );
 
+has template_args => (
+    is        => 'rw',
+    predicate => 'has_template_args',
+);
+
 sub render {
     my ( $self, $result ) = @_;
     $result ||= $self->result;
@@ -26,7 +31,7 @@ sub render {
       . "'. Field may be inactive."
       unless $result;
 
-    my $form  = $self->form;
+    my $form = $self->form;
 
     my %args = ( field => $self, maybe c => $form->ctx );
 
@@ -34,12 +39,12 @@ sub render {
         $form->$method( $self, \%args );
     }
 
-    if ( my $method = $self->can('template_args') ) {
-        $self->$method( \%args );
+    if ( $self->has_template_args ) {
+        $self->template_args->( $self, \%args );
     }
 
     if ( my $method = $form->can( 'template_args_' . $self->name ) ) {
-        $form->$method( $self, \%args );
+        $form->$method( \%args );
     }
 
     return $self->template_renderer->( \%args );
