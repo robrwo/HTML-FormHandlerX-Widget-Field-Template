@@ -1,4 +1,10 @@
+use strict;
+use warnings;
 package HTML::FormHandlerX::Widget::Field::Template;
+{
+    $HTML::FormHandlerX::Widget::Field::Template::VERSION = '0.001';
+}
+# ABSTRACT: render form fields using templates
 
 use Moose::Role;
 
