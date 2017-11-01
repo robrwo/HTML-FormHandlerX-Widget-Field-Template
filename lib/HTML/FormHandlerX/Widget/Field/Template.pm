@@ -20,7 +20,7 @@ has template_renderer => (
     lazy    => 1,
     default => sub {
         my ($self) = @_;
-        $self->form->template_renderer($self);
+        $self->form->template_renderer;
     },
 );
 
@@ -53,7 +53,7 @@ sub render {
         $form->$method( \%args );
     }
 
-    return $self->template_renderer->( \%args );
+    return $self->template_renderer->( $self, \%args );
 }
 
 1;
