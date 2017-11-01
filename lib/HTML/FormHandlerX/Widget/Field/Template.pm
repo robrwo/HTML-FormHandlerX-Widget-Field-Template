@@ -6,6 +6,40 @@ package HTML::FormHandlerX::Widget::Field::Template;
 }
 # ABSTRACT: render form fields using templates
 
+=head1 NAME
+
+HTML::FormHandlerX::Widget::Field::Template - render form fields using templates
+
+=head1 SYNOPSIS
+
+In a form class:
+
+  has_field foo => (
+    widget        => 'Template',
+    template_args => sub {
+      my ($field, $args) = @_;
+      ...
+    },
+  );
+
+  sub template_renderer {
+    my ( $self ) = @_;
+
+    return sub {
+        my ($field, $args) = @_;
+
+        ...
+
+    };
+  }
+
+=head1 DESCRIPTION
+
+This is an L<HTML::FormHandler> widget that allows you to use a
+template for rendering forms instead of Perl methods.
+
+=cut
+
 use Moose::Role;
 
 use PerlX::Maybe;
