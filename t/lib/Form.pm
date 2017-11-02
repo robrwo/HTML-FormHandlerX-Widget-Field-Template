@@ -5,9 +5,7 @@ extends 'HTML::FormHandler';
 
 use Template;
 
-has '+name' => (
-    default => 'b',
-);
+has '+name' => ( default => 'b', );
 
 has template => (
     is      => 'ro',
