@@ -25,10 +25,12 @@ In a form class:
   );
 
   sub template_renderer {
-    my ( $self ) = @_;
+    my ( $self, $field ) = @_;
 
     return sub {
-        my ($field, $args) = @_;
+        my ($args) = @_;
+
+        my $field = $args->{field};
 
         ...
 
@@ -44,7 +46,6 @@ template for rendering forms instead of Perl methods.
 
 use Moose::Role;
 
-use PerlX::Maybe;
 use Types::Standard -types;
 
 use namespace::autoclean;
@@ -74,7 +75,7 @@ sub render {
 
     my $form = $self->form;
 
-    my %args = ( field => $self, maybe c => $form->ctx );
+    my %args;
 
     if ( my $method = $form->can('template_args') ) {
         $form->$method( $self, \%args );
@@ -88,7 +89,7 @@ sub render {
         $form->$method( \%args );
     }
 
-    return $self->template_renderer->( $self, \%args );
+    return $self->template_renderer->( { %args, field => $self } );
 }
 
 1;

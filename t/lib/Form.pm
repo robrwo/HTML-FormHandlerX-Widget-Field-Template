@@ -42,8 +42,8 @@ sub template_renderer {
     my ( $self, $field ) = @_;
 
     return sub {
-        my ($field, $args) = @_;
-        $self->template->process( $self->template_path($field),
+        my ($args) = @_;
+        $self->template->process( $self->template_path( $args->{field} ),
             $args, \my $output );
         return $output;
     };
