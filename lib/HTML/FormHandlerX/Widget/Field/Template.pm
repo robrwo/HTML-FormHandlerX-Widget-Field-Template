@@ -45,7 +45,6 @@ template for rendering forms instead of Perl methods.
 use Moose::Role;
 
 use PerlX::Maybe;
-use Template;
 use Types::Standard -types;
 
 use namespace::autoclean;
