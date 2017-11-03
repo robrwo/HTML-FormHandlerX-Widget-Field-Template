@@ -10,7 +10,9 @@ has '+name' => ( default => 'b', );
 has template => (
     is      => 'ro',
     lazy    => 1,
-    default => sub { Template->new },
+    default => sub {
+        Template->new();
+    },
 );
 
 has_field a => (
