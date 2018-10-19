@@ -1,10 +1,9 @@
+package HTML::FormHandlerX::Widget::Field::Template;
+
 use strict;
 use warnings;
 
-package HTML::FormHandlerX::Widget::Field::Template;
-{
-    $HTML::FormHandlerX::Widget::Field::Template::VERSION = '0.001';
-}
+our $VERSION = 'v0.1.0';
 
 # ABSTRACT: render fields using templates
 
