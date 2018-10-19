@@ -92,3 +92,24 @@ sub render {
 }
 
 1;
+
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<HTML::FormHandler>
+
+=item *
+
+L<Template>
+
+=back
+
+=head1 append:AUTHOR
+
+The initial development of this module was sponsored by Science Photo
+Library L<https://www.sciencephoto.com>.
+
+=cut
