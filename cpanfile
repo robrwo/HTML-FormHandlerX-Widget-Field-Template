@@ -1,6 +1,7 @@
 requires "Moose::Role" => "0";
 requires "Types::Standard" => "0";
 requires "namespace::autoclean" => "0";
+requires "perl" => "v5.10.0";
 
 on 'test' => sub {
   requires "File::Spec" => "0";

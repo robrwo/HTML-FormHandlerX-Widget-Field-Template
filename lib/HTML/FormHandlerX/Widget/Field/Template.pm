@@ -1,5 +1,7 @@
 package HTML::FormHandlerX::Widget::Field::Template;
 
+use v5.10;
+
 use strict;
 use warnings;
 
