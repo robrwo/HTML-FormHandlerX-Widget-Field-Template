@@ -42,9 +42,31 @@ template for rendering forms instead of Perl methods.
 
 HTML::FormHandlerX::Widget::Field::Template - render fields using templates
 
+# SEE ALSO
+
+- [HTML::FormHandler](https://metacpan.org/pod/HTML::FormHandler)
+- [Template](https://metacpan.org/pod/Template)
+
+# SOURCE
+
+The development version is on github at [https://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template](https://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template)
+and may be cloned from [git://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template.git](git://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template.git)
+
+# BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+[https://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template/issues](https://github.com/robrwo/HTML-FormHandlerX-Widget-Field-Template/issues)
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
 # AUTHOR
 
 Robert Rothenberg <rrwo@cpan.org>
+
+The initial development of this module was sponsored by Science Photo
+Library [https://www.sciencephoto.com](https://www.sciencephoto.com).
 
 # COPYRIGHT AND LICENSE
 
