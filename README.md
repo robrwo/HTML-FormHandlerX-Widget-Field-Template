@@ -38,10 +38,6 @@ sub template_renderer {
 This is an [HTML::FormHandler](https://metacpan.org/pod/HTML::FormHandler) widget that allows you to use a
 template for rendering forms instead of Perl methods.
 
-# NAME
-
-HTML::FormHandlerX::Widget::Field::Template - render fields using templates
-
 # SEE ALSO
 
 - [HTML::FormHandler](https://metacpan.org/pod/HTML::FormHandler)
@@ -67,6 +63,10 @@ Robert Rothenberg <rrwo@cpan.org>
 
 The initial development of this module was sponsored by Science Photo
 Library [https://www.sciencephoto.com](https://www.sciencephoto.com).
+
+# CONTRIBUTOR
+
+Mohammad S Anwar <mohammad.anwar@yahoo.com>
 
 # COPYRIGHT AND LICENSE
 
