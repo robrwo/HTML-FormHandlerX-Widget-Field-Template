@@ -9,10 +9,6 @@ our $VERSION = 'v0.1.1';
 
 # ABSTRACT: render fields using templates
 
-=head1 NAME
-
-HTML::FormHandlerX::Widget::Field::Template - render fields using templates
-
 =head1 SYNOPSIS
 
 In a form class:
