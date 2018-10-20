@@ -4,5 +4,7 @@ Revision history for HTML-FormHandlerX-Widget-Field-Template
   [Documentation]
   - Remove duplicate NAME section from POD (Mohammad S Anwar)
 
+  - Minor reformatting of Changes
+
 v0.1.0    2018-10-19 23:07:29+01:00 Europe/London
-        - Initial release
+  - Initial release
