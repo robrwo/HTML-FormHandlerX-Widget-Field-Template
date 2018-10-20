@@ -1,6 +1,8 @@
 Revision history for HTML-FormHandlerX-Widget-Field-Template
 
 {{$NEXT}}
+  [Documentation]
+  - Remove duplicate NAME section from POD (Mohammad S Anwar)
 
 v0.1.0    2018-10-19 23:07:29+01:00 Europe/London
         - Initial release
